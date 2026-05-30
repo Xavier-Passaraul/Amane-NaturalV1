@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Bloquear archivos innecesarios
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap
+Sitemap: https://amane-natural.onrender.com/sitemap.xml

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://amane-natural.onrender.com/index.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://amane-natural.onrender.com/img/logo.png</image:loc>
+      <image:title>Amane Natural - Logo</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://amane-natural.onrender.com/productos.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://amane-natural.onrender.com/img/img-crema-h.jpg</image:loc>
+      <image:title>Crema Hidratante Natural — Amane Natural</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amane-natural.onrender.com/img/p2.jpg</image:loc>
+      <image:title>Noctéa Balance Repair — Amane Natural</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amane-natural.onrender.com/img/p3.jpg</image:loc>
+      <image:title>Descontracturante — Amane Natural</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amane-natural.onrender.com/img/p4.jpg</image:loc>
+      <image:title>Crema Reparadora Total — Amane Natural</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://amane-natural.onrender.com/masajes.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://amane-natural.onrender.com/img/masaje.jpg</image:loc>
+      <image:title>Masajes Profesionales — Amane Natural</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://amane-natural.onrender.com/sobre.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

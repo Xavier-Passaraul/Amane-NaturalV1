@@ -1,0 +1,272 @@
+/* ══════════════════════════════════════════
+   AMANE NATURAL — sobre.css
+   ══════════════════════════════════════════ */
+
+/* ── HERO SPLIT ── */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+.hero-split__img {
+  position: relative;
+  overflow: hidden;
+}
+.hero-split__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 8s ease;
+}
+.hero-split__img:hover img { transform: scale(1.04); }
+.hero-split__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(78,98,72,0.3) 0%, transparent 60%);
+}
+.hero-split__content {
+  background: linear-gradient(160deg, #FFD1D1 0%, #F9BEBE 50%, #E17070 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 4rem 5rem;
+  position: relative;
+}
+.hero-split__content::before {
+  content: 'Amane';
+  position: absolute;
+  bottom: -2rem; right: -1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(124,145,114,0.07);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-split__content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+.hero-split__content h1 em { font-style: italic; color: var(--sage-dark); }
+.hero-split__content p {
+  font-size: 0.95rem;
+  color: var(--stone);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  max-width: 440px;
+}
+.hero-split__content p strong { color: var(--charcoal); font-weight: 500; }
+
+.signature { margin-top: 2rem; display: flex; align-items: center; gap: 1rem; }
+.signature__line { width: 40px; height: 1px; background: var(--sage); }
+.signature__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--sage-dark);
+  font-weight: 400;
+}
+.signature__role {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+
+/* ── PILARES ── */
+.pilares {
+  background: var(--sage-dark);
+  padding: 5rem 3rem;
+}
+.pilares__inner  { max-width: 1100px; margin: 0 auto; }
+.pilares__header { text-align: center; margin-bottom: 3.5rem; }
+.pilares__header .section-label { color: var(--sage-light); }
+.pilares__header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.2;
+}
+.pilares__header h2 em { font-style: italic; color: var(--sage-light); }
+
+.pilares__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.pilar-card {
+  background: rgba(253,250,245,0.06);
+  border: 1px solid rgba(168,188,157,0.2);
+  border-radius: 1.2rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.pilar-card:hover { background: rgba(253,250,245,0.1); transform: translateY(-4px); }
+.pilar-card__icon {
+  width: 56px; height: 56px;
+  background: rgba(168,188,157,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 1.4rem;
+}
+.pilar-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+.pilar-card p { font-size: 0.85rem; color: rgba(253,250,245,0.6); line-height: 1.65; font-weight: 300; }
+
+/* ── ESPACIO ── */
+.espacio { background: var(--cream); padding: 6rem 3rem; }
+.espacio__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.espacio__text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--charcoal);
+  margin-bottom: 1.25rem;
+}
+.espacio__text h2 em { font-style: italic; color: var(--sage-dark); }
+.espacio__text p  { font-size: 0.92rem; color: var(--stone); line-height: 1.8; font-weight: 300; margin-bottom: 0.75rem; }
+.espacio__text p strong { color: var(--charcoal); font-weight: 500; }
+
+.espacio__chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.75rem; }
+.chip {
+  background: var(--white);
+  border: 1px solid rgba(124,145,114,0.3);
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--sage-dark);
+  font-weight: 400;
+}
+
+.espacio__map { border-radius: 1.2rem; overflow: hidden; box-shadow: 0 12px 40px rgba(44,43,40,0.1); }
+.espacio__map iframe { width: 100%; height: 380px; border: none; display: block; }
+
+.espacio__address {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--stone);
+  font-weight: 300;
+}
+.espacio__address svg { width: 16px; height: 16px; stroke: var(--sage); stroke-width: 2; fill: none; flex-shrink: 0; }
+
+/* ── QUOTE ── */
+.quote-section { background: var(--white); padding: 6rem 3rem; text-align: center; }
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  line-height: 0.5;
+  color: var(--sage-light);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--charcoal);
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.quote-author { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); font-weight: 500; }
+
+/* ── FAQ ── */
+.faq-section { background: var(--cream); padding: 6rem 3rem; }
+.faq__inner  { max-width: 760px; margin: 0 auto; }
+.faq__header { text-align: center; margin-bottom: 3rem; }
+.faq__header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  color: var(--charcoal);
+}
+.faq__header h2 em { font-style: italic; color: var(--sage-dark); }
+
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid rgba(124,145,114,0.2); overflow: hidden; }
+.faq-item:first-child { border-top: 1px solid rgba(124,145,114,0.2); }
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  transition: color 0.25s;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+}
+.faq-question:hover { color: var(--sage-dark); }
+
+.faq-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--cream-dark);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.25s, transform 0.35s;
+}
+.faq-icon svg { width: 12px; height: 12px; stroke: var(--charcoal); stroke-width: 2; fill: none; transition: stroke 0.25s; }
+.faq-item.open .faq-icon           { background: var(--sage); transform: rotate(45deg); }
+.faq-item.open .faq-icon svg       { stroke: var(--white); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25,0.46,0.45,0.94), padding 0.3s;
+  padding: 0;
+}
+.faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.25rem; }
+.faq-answer p { font-size: 0.88rem; color: var(--stone); line-height: 1.75; font-weight: 300; }
+.faq-answer a { color: var(--sage-dark); text-decoration: none; border-bottom: 1px solid rgba(78,98,72,0.3); transition: border-color 0.2s; }
+.faq-answer a:hover { border-color: var(--sage-dark); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-split          { grid-template-columns: 1fr; min-height: auto; }
+  .hero-split__img     { height: 55vw; min-height: 300px; }
+  .hero-split__content { padding: 4rem 1.5rem; }
+  .pilares             { padding: 4rem 1.5rem; }
+  .pilares__grid       { grid-template-columns: 1fr; gap: 1rem; }
+  .espacio             { padding: 4rem 1.5rem; }
+  .espacio__inner      { grid-template-columns: 1fr; gap: 2.5rem; }
+  .quote-section       { padding: 4rem 1.5rem; }
+  .faq-section         { padding: 4rem 1.5rem; }
+}

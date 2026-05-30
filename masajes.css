@@ -1,0 +1,249 @@
+/* ══════════════════════════════════════════
+   AMANE NATURAL — masajes.css
+   ══════════════════════════════════════════ */
+
+/* ── HERO ── */
+.hero {
+  min-height: 80vh;
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/masaje-index.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.38;
+  transform: scale(1.04);
+  transition: transform 10s ease;
+}
+.hero:hover .hero__bg { transform: scale(1.0); }
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(44,43,40,0.7) 0%, rgba(78,98,72,0.35) 100%);
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 9rem 3rem 5rem;
+  max-width: 700px;
+}
+.hero__content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-weight: 300;
+  line-height: 1.08;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+.hero__content h1 em { font-style: italic; color: var(--sage-light); }
+.hero__content p {
+  font-size: 1rem;
+  color: rgba(253,250,245,0.72);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+.hero__quote {
+  position: absolute;
+  bottom: 0; right: 0;
+  background: rgba(253,250,245,0.07);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-left: 2px solid var(--sage);
+  padding: 1.5rem 2.5rem;
+  max-width: 340px;
+}
+.hero__quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/* ── BENEFICIOS ── */
+.beneficios { background: var(--white); padding: 4.5rem 3rem; }
+.beneficios__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.beneficios__label h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+.beneficios__label h2 em { font-style: italic; color: var(--sage-dark); }
+.beneficios__divider { width: 1px; height: 80px; background: rgba(124,145,114,0.3); flex-shrink: 0; }
+.beneficios__pills   { display: flex; flex-wrap: wrap; gap: 0.75rem; flex: 1; }
+
+.beneficio-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--cream);
+  border: 1px solid rgba(124,145,114,0.25);
+  border-radius: 2rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--charcoal);
+  font-weight: 400;
+  transition: background 0.25s, border-color 0.25s;
+}
+.beneficio-pill:hover { background: var(--cream-dark); border-color: var(--sage); }
+.beneficio-pill span  { color: var(--sage); font-size: 1rem; }
+
+/* ── MASAJES GRID ── */
+.masajes-section { padding: 6rem 3rem; background: var(--cream); }
+.masajes__header { text-align: center; margin-bottom: 3.5rem; }
+.masajes__header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.15;
+}
+.masajes__header h2 em { font-style: italic; color: var(--sage-dark); }
+
+.masajes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── MASAJE CARD ── */
+.masaje-card {
+  background: var(--white);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.35s;
+}
+.masaje-card:hover { transform: translateY(-6px); box-shadow: 0 18px 52px rgba(44,43,40,0.12); }
+.masaje-card--featured {
+  grid-column: span 2;
+  flex-direction: row;
+}
+
+.masaje-card__img {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream-dark);
+}
+.masaje-card__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.masaje-card:hover .masaje-card__img img { transform: scale(1.06); }
+.masaje-card:not(.masaje-card--featured) .masaje-card__img { aspect-ratio: 3/2; }
+.masaje-card--featured .masaje-card__img { width: 42%; flex-shrink: 0; }
+
+.masaje-card__body {
+  padding: 1.6rem 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.masaje-card__icon {
+  width: 44px; height: 44px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+.masaje-card__body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.masaje-card--featured .masaje-card__body h3 { font-size: 1.8rem; }
+.masaje-card__body p { font-size: 0.85rem; color: var(--stone); line-height: 1.65; font-weight: 300; flex: 1; }
+
+.masaje-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  text-decoration: none;
+  background: var(--sage);
+  color: var(--white);
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: fit-content;
+  transition: background 0.3s, transform 0.2s;
+}
+.masaje-cta:hover { background: var(--sage-dark); transform: translateY(-1px); }
+.masaje-cta img   { height: 16px; }
+
+/* ── MOMENTO ── */
+.momento {
+  position: relative;
+  padding: 8rem 3rem;
+  overflow: hidden;
+  background: var(--sage-dark);
+  text-align: center;
+}
+.momento::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/masaje.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+}
+.momento__inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+.momento .section-label { color: var(--sage-light); margin-bottom: 1rem; }
+.momento h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.momento h2 em { font-style: italic; color: var(--sage-light); }
+.momento p { font-size: 0.95rem; color: rgba(253,250,245,0.65); line-height: 1.75; font-weight: 300; margin-bottom: 2.5rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1000px) {
+  .masajes-grid { grid-template-columns: 1fr 1fr; }
+  .masaje-card--featured { grid-column: span 2; flex-direction: column; }
+  .masaje-card--featured .masaje-card__img { width: 100%; aspect-ratio: 16/8; }
+}
+@media (max-width: 900px) {
+  .hero__content  { padding: 8rem 1.5rem 4rem; }
+  .hero__quote    { display: none; }
+  .beneficios     { padding: 3rem 1.5rem; }
+  .beneficios__inner   { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .beneficios__divider { display: none; }
+  .masajes-section { padding: 4rem 1.5rem; }
+  .masajes-grid   { grid-template-columns: 1fr; }
+  .masaje-card--featured { grid-column: span 1; }
+  .momento        { padding: 5rem 1.5rem; }
+}
