@@ -92,23 +92,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   }
 
-    // Hamburger
-    const burger = document.getElementById('navBurger');
-    const navLinks = document.querySelector('.nav-links');
-    if (burger && navLinks) {
-      burger.addEventListener('click', () => {
-        burger.classList.toggle('open');
-        navLinks.classList.toggle('open');
-        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  /* ── HAMBURGER ── */
+  const burger = document.getElementById('navBurger');
+  const navLinks = document.querySelector('.nav-links');
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
       });
-      navLinks.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          burger.classList.remove('open');
-          navLinks.classList.remove('open');
-          document.body.style.overflow = '';
-        });
+    });
+  }
+
+  /* ── VIDEO CAROUSEL ── */
+  const heroVids = document.querySelectorAll('.hero-vid');
+  if (heroVids.length) {
+    let current = 0;
+    heroVids[0].play();
+
+    heroVids.forEach((vid, i) => {
+      vid.addEventListener('ended', () => {
+        heroVids[i].classList.remove('active');
+        heroVids[i].currentTime = 0;
+        current = (i + 1) % heroVids.length;
+        heroVids[current].classList.add('active');
+        heroVids[current].play();
       });
-    }
+    });
+  }
+
 });
 
 /* ── MODAL DE PRODUCTOS CON CARRITO ── */

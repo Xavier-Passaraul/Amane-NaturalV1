@@ -14,7 +14,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1400&q=80');
+  background-image: url('img/fondo.png');
   background-size: cover;
   background-position: center;
   opacity: 0.1;

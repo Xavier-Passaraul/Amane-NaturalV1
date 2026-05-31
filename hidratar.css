@@ -14,7 +14,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1400&q=80');
+  background-image: url('img/fondo.png');
   background-size: cover;
   background-position: center;
   opacity: 0.12;
@@ -180,12 +180,12 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #fff;
+  color: black;
   margin-bottom: 0.4rem;
 }
 .ingredient-card p {
   font-size: 0.84rem;
-  color: rgba(255,255,255,0.75);
+  color: black;
   line-height: 1.6;
   font-weight: 300;
 }

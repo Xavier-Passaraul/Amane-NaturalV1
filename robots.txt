@@ -6,4 +6,4 @@ Disallow: /css/
 Disallow: /js/
 
 # Sitemap
-Sitemap: https://amane-natural.onrender.com/sitemap.xml
+Sitemap: https://amane-natural.vercel.app/sitemap.xml

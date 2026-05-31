@@ -32,54 +32,43 @@
   padding: 8rem 4rem 5rem;
   position: relative;
 }
-.hero-split__content::before {
-  content: 'Amane';
-  position: absolute;
-  bottom: -2rem; right: -1rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(5rem, 10vw, 9rem);
-  font-weight: 300;
-  font-style: italic;
-  color: rgba(124,145,114,0.07);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-}
 .hero-split__content h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.4rem, 4vw, 3.8rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.12;
-  color: var(--charcoal);
+  color: #1a1a18;
   margin-bottom: 1.5rem;
 }
-.hero-split__content h1 em { font-style: italic; color: var(--sage-dark); }
+.hero-split__content h1 em { font-style: italic; color: #3a5234; }
 .hero-split__content p {
   font-size: 0.95rem;
-  color: var(--stone);
+  color: #3b3a36;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 1rem;
   max-width: 440px;
 }
-.hero-split__content p strong { color: var(--charcoal); font-weight: 500; }
+.hero-split__content p strong { color: #1a1a18; font-weight: 600; }
+
+.hero-split__content .section-label { color: #3a5234; font-weight: 500; }
 
 .signature { margin-top: 2rem; display: flex; align-items: center; gap: 1rem; }
-.signature__line { width: 40px; height: 1px; background: var(--sage); }
+.signature__line { width: 40px; height: 1px; background: #3a5234; }
 .signature__name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
   font-style: italic;
-  color: var(--sage-dark);
-  font-weight: 400;
+  color: #3a5234;
+  font-weight: 500;
 }
 .signature__role {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--stone);
+  color: #3b3a36;
   margin-top: 0.15rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* ── PILARES ── */

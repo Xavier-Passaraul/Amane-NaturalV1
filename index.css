@@ -11,12 +11,22 @@
   display: flex;
   align-items: flex-end;
 }
-.hero video {
+.hero-videos {
   position: absolute;
   inset: 0;
-  width: 100%; height: 100%;
+}
+.hero-vid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero-vid.active {
+  opacity: 1;
 }
 .hero__overlay {
   position: absolute;
@@ -214,27 +224,6 @@
 }
 .tip-link:hover { gap: 0.7rem; }
 .tip-link svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; }
-
-/* ── RESPONSIVE ── 
-@media (max-width: 900px) {
-  .categories { padding: 4rem 1.5rem; }
-  .tips        { padding: 4rem 1.5rem; }
-  .categories__grid,
-  .tips__grid  { grid-template-columns: 1fr 1fr; }
-  .hero__content { padding: 0 1.5rem 4rem; }
-  .tips__header  { flex-direction: column; align-items: flex-start; gap: 1rem; }
-}
-@media (max-width: 600px) {
-  .categories__grid,
-  .tips__grid { grid-template-columns: 1fr; } 
-} */
-
-
-/* ════════════════════════════════════════════════════
-   RESPONSIVE COMPLETO — index.css
-   Reemplazá el bloque /* ── RESPONSIVE ── */
-   al final de index.css por todo esto
-   ════════════════════════════════════════════════════ */
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
