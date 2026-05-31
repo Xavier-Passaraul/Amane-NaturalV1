@@ -110,3 +110,89 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 });
+
+/* ── MODAL DE PRODUCTOS CON CARRITO ── */
+(function () {
+  const WA_NUMBER = '5493536561455';
+  const WA_BASE   = `https://wa.me/${WA_NUMBER}?text=`;
+ 
+  const modal       = document.getElementById('modal');
+  const modalClose  = document.getElementById('modalClose');
+  const modalImg    = document.getElementById('modalImg');
+  const modalCat    = document.getElementById('modalCategory');
+  const modalTitle  = document.getElementById('modalTitle');
+  const modalDesc   = document.getElementById('modalDesc');
+  const modalBenef  = document.getElementById('modalBenefits');
+  const modalWaBtn  = document.getElementById('modalWaBtn');
+  const qtyMinus    = document.getElementById('qtyMinus');
+  const qtyPlus     = document.getElementById('qtyPlus');
+  const qtyValue    = document.getElementById('qtyValue');
+ 
+  let currentProduct = '';
+  let qty = 1;
+ 
+  /* Construye el link de WA con el mensaje dinámico */
+  function buildWaLink(productName, quantity) {
+    const msg = `Hola Amane, Quiero comprar ${productName}, necesito ${quantity}.`;
+    return WA_BASE + encodeURIComponent(msg);
+  }
+ 
+  /* Actualiza el link cada vez que cambia cantidad o producto */
+  function refreshWaLink() {
+    modalWaBtn.href = buildWaLink(currentProduct, qty);
+  }
+ 
+  /* Controles de cantidad */
+  qtyMinus.addEventListener('click', () => {
+    if (qty > 1) { qty--; qtyValue.textContent = qty; refreshWaLink(); }
+  });
+  qtyPlus.addEventListener('click', () => {
+    if (qty < 99) { qty++; qtyValue.textContent = qty; refreshWaLink(); }
+  });
+ 
+  /* Abrir modal */
+  document.querySelectorAll('.product-card__quick-view').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.product-card');
+      if (!card) return;
+ 
+      currentProduct = card.dataset.name  || '';
+      qty = 1;
+      qtyValue.textContent = qty;
+ 
+      modalImg.src           = card.dataset.img      || '';
+      modalImg.alt           = currentProduct;
+      modalCat.textContent   = card.dataset.category || '';
+      modalTitle.textContent = currentProduct;
+      modalDesc.textContent  = card.dataset.desc     || '';
+ 
+      /* Beneficios */
+      modalBenef.innerHTML = '';
+      (card.dataset.benefits || '').split('|').forEach(b => {
+        if (!b.trim()) return;
+        const el = document.createElement('div');
+        el.className = 'benefit-item';
+        el.innerHTML = `<span class="benefit-check">✓</span> ${b.trim()}`;
+        modalBenef.appendChild(el);
+      });
+ 
+      refreshWaLink();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+ 
+  /* Cerrar modal */
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+})();

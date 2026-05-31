@@ -284,6 +284,67 @@
 .modal__cta:hover { background: var(--sage-dark); transform: translateY(-2px); }
 .modal__cta img   { height: 20px; }
 
+/* ── CARRITO EN MODAL ── */
+.modal__cart {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1.5rem 0 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--cream, #fdf7f0);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(124,145,114,0.18);
+}
+ 
+.modal__cart-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone, #8a7e72);
+  font-weight: 500;
+  margin: 0;
+  flex-shrink: 0;
+}
+ 
+.modal__qty {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--white, #fff);
+  border: 1px solid rgba(124,145,114,0.25);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+ 
+.qty-btn {
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--sage-dark, #4e6248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-bottom: 2px; /* compensación óptica del − */
+}
+.qty-btn:hover { background: var(--sage-light, #a8bc9d); color: var(--white, #fff); }
+.qty-btn:active { background: var(--sage, #7c9172); }
+ 
+.qty-value {
+  min-width: 36px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--charcoal, #2c2b28);
+  user-select: none;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .page-header         { padding: 8rem 1.5rem 3rem; }

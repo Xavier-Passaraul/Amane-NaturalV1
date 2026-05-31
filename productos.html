@@ -9,31 +9,31 @@
   <meta name="keywords" content="crema hidratante natural, cosmética natural argentina, crema reparadora natural, noctea balance repair, productos naturales villa maría, crema descontracturante">
   <meta name="author" content="Amane Natural">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://amane-natural.onrender.com/productos.html">
+  <link rel="canonical" href="https://amane-natural.vercel.app/productos.html">
 
   <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_GSC">
 
   <meta property="og:type"        content="website">
   <meta property="og:site_name"   content="Amane Natural">
   <meta property="og:locale"      content="es_AR">
-  <meta property="og:url"         content="https://amane-natural.onrender.com/productos.html">
+  <meta property="og:url"         content="https://amane-natural.vercel.app/productos.html">
   <meta property="og:title"       content="Productos Naturales — Amane Natural">
   <meta property="og:description" content="Cremas hidratantes, reparadoras y tratamientos nocturnos 100% naturales. Enviamos a Villa María, Córdoba.">
-  <meta property="og:image"       content="https://amane-natural.onrender.com/img/og-image.jpg">
+  <meta property="og:image"       content="https://amane-natural.vercel.app/img/og-image.jpg">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Productos Naturales — Amane Natural">
   <meta name="twitter:description" content="Cosmética natural para el cuidado de tu piel. Villa María, Córdoba.">
-  <meta name="twitter:image"       content="https://amane-natural.onrender.com/img/og-image.jpg">
+  <meta name="twitter:image"       content="https://amane-natural.vercel.app/img/og-image.jpg">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Productos Naturales — Amane Natural",
-    "url": "https://amane-natural.onrender.com/productos.html",
+    "url": "https://amane-natural.vercel.app/productos.html",
     "itemListElement": [
       {
         "@type": "ListItem", "position": 1,
@@ -41,7 +41,7 @@
           "@type": "Product",
           "name": "Crema Hidratante",
           "description": "Hidratación profunda para todo tipo de piel con ingredientes 100% naturales.",
-          "image": "https://amane-natural.onrender.com/img/img-crema-h.jpg",
+          "image": "https://amane-natural.vercel.app/img/img-crema-h.jpg",
           "brand": { "@type": "Brand", "name": "Amane Natural" },
           "offers": { "@type": "Offer", "priceCurrency": "ARS", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "Amane Natural" } }
         }
@@ -52,7 +52,7 @@
           "@type": "Product",
           "name": "Noctéa Balance Repair",
           "description": "Crema facial nocturna renovadora y reguladora.",
-          "image": "https://amane-natural.onrender.com/img/p2.jpg",
+          "image": "https://amane-natural.vercel.app/img/p2.jpg",
           "brand": { "@type": "Brand", "name": "Amane Natural" },
           "offers": { "@type": "Offer", "priceCurrency": "ARS", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "Amane Natural" } }
         }
@@ -63,7 +63,7 @@
           "@type": "Product",
           "name": "Descontracturante",
           "description": "Alivia lesiones causadas por esfuerzos físicos.",
-          "image": "https://amane-natural.onrender.com/img/p3.jpg",
+          "image": "https://amane-natural.vercel.app/img/p3.jpg",
           "brand": { "@type": "Brand", "name": "Amane Natural" },
           "offers": { "@type": "Offer", "priceCurrency": "ARS", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "Amane Natural" } }
         }
@@ -74,7 +74,7 @@
           "@type": "Product",
           "name": "Crema Reparadora Total",
           "description": "Regenera y nutre la piel dañada.",
-          "image": "https://amane-natural.onrender.com/img/p4.jpg",
+          "image": "https://amane-natural.vercel.app/img/p4.jpg",
           "brand": { "@type": "Brand", "name": "Amane Natural" },
           "offers": { "@type": "Offer", "priceCurrency": "ARS", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "Amane Natural" } }
         }
@@ -259,26 +259,41 @@
 
   <!-- MODAL -->
   <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
-    <div class="modal">
-      <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
-      <div class="modal__img">
-        <img id="modalImg" src="" alt="">
+  <div class="modal">
+    <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+ 
+    <div class="modal__img">
+      <img id="modalImg" src="" alt="">
+    </div>
+ 
+    <div class="modal__content">
+      <p class="modal__category" id="modalCategory"></p>
+      <h2 class="modal__title" id="modalTitle"></h2>
+      <p class="modal__desc" id="modalDesc"></p>
+ 
+      <div class="modal__benefits">
+        <p class="modal__benefits-label">Beneficios</p>
+        <div class="benefit-list" id="modalBenefits"></div>
       </div>
-      <div class="modal__content">
-        <p class="modal__category" id="modalCategory"></p>
-        <h2 class="modal__title" id="modalTitle"></h2>
-        <p class="modal__desc" id="modalDesc"></p>
-        <div class="modal__benefits">
-          <p class="modal__benefits-label">Beneficios</p>
-          <div class="benefit-list" id="modalBenefits"></div>
+ 
+      <!-- CARRITO DE CANTIDAD -->
+      <div class="modal__cart">
+        <p class="modal__cart-label">Cantidad</p>
+        <div class="modal__qty">
+          <button class="qty-btn" id="qtyMinus" aria-label="Restar">−</button>
+          <span class="qty-value" id="qtyValue">1</span>
+          <button class="qty-btn" id="qtyPlus" aria-label="Sumar">+</button>
         </div>
-        <a href="https://wa.link/bl452o" class="modal__cta" target="_blank">
-          <img src="img/Whatsapp-Logo.png" alt="">
-          Consultar por este producto
-        </a>
       </div>
+ 
+      <!-- CTA WHATSAPP con mensaje dinámico -->
+      <a id="modalWaBtn" href="#" class="modal__cta" target="_blank">
+        <img src="img/Whatsapp-Logo.png" alt="">
+        Consultar por este producto
+      </a>
     </div>
   </div>
+</div>
 
   <script src="main.js"></script>
 </body>
