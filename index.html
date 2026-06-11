@@ -91,19 +91,9 @@
   }
   </script>
  
-  <!-- ── GOOGLE ANALYTICS 4 ── -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FL4YZ59S98');
-  </script>
- 
   <!-- ── PERFORMANCE ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
  
   <link rel="stylesheet" href="global.css">
@@ -112,7 +102,7 @@
 <body>
   <nav class="site-nav site-nav--transparent" id="mainNav">
     <a href="index.html" class="nav-logo">
-      <img src="img/negro..png" alt="Amane Natural">
+      <img src="img/negro..png" alt="Amane Natural" width="181" height="56">
     </a>
     <ul class="nav-links">
       <li><a href="productos.html">Productos</a></li>
@@ -129,10 +119,10 @@
  
   <section class="hero">
     <div class="hero-videos">
-      <video class="hero-vid active" muted playsinline>
+      <video class="hero-vid active" muted playsinline preload="auto">
         <source src="img/video1.mp4" type="video/mp4">
       </video>
-      <video class="hero-vid" muted playsinline>
+      <video class="hero-vid" muted playsinline preload="none">
         <source src="img/video2.mp4" type="video/mp4">
       </video>
       <!-- <video class="hero-vid" muted playsinline>
@@ -160,19 +150,19 @@
     </div>
     <div class="categories__grid">
       <div class="category-card fade-up" style="transition-delay:.1s">
-        <img src="img/cuidado-facial.avif" alt="Cuidado Facial">
+        <img src="img/cuidado-facial.avif" alt="Cuidado Facial" width="665" height="665" loading="lazy" decoding="async">
         <div class="category-card__overlay">
           <h3>Cuidado<br>Facial</h3>
         </div>
       </div>
       <div class="category-card fade-up" style="transition-delay:.2s">
-        <img src="img/masaje-corporal.avif" alt="Masajes">
+        <img src="img/masaje-corporal.avif" alt="Masajes" width="665" height="532" loading="lazy" decoding="async">
         <div class="category-card__overlay">
           <h3>Masajes corporales<br>y faciales</h3>
         </div>
       </div>
       <div class="category-card fade-up" style="transition-delay:.3s">
-        <img src="img/cuidado-corporal.avif" alt="Cuidado Corporal">
+        <img src="img/cuidado-corporal.avif" alt="Cuidado Corporal" width="665" height="665" loading="lazy" decoding="async">
         <div class="category-card__overlay">
           <h3>Cuidado<br>Corporal</h3>
         </div>
@@ -195,7 +185,7 @@
     </div>
     <div class="tips__grid">
       <a href="hidratar.html" class="tip-card fade-up" style="transition-delay:.1s">
-        <img src="img/hidratante.avif" alt="Hidratación">
+        <img src="img/hidratante.avif" alt="Hidratación" width="665" height="831" loading="lazy" decoding="async">
         <div class="tip-card__body">
           <span class="tip-tag">Piel & cuidado</span>
           <h3>Cómo hidratar tu piel</h3>
@@ -204,7 +194,7 @@
         </div>
       </a>
       <a href="masajes.html" class="tip-card fade-up" style="transition-delay:.2s">
-        <img src="img/masaje.avif" alt="Masajes">
+        <img src="img/masaje.avif" alt="Masajes" width="665" height="665" loading="lazy" decoding="async">
         <div class="tip-card__body">
           <span class="tip-tag">Bienestar</span>
           <h3>Masajes que renuevan el alma</h3>
@@ -213,7 +203,7 @@
         </div>
       </a>
       <a href="rutina.html" class="tip-card fade-up" style="transition-delay:.3s">
-        <img src="img/rutina.avif" alt="Rutina Facial">
+        <img src="img/rutina.avif" alt="Rutina Facial" width="665" height="443" loading="lazy" decoding="async">
         <div class="tip-card__body">
           <span class="tip-tag">Rutina facial</span>
           <h3>Rutina facial ideal</h3>
@@ -230,13 +220,13 @@
       <p>Contactanos por WhatsApp y te respondemos a la brevedad.</p>
     </div>
     <a href="https://wa.link/bl452o" class="wa-strip__cta" target="_blank">
-      <img src="img/Whatsapp-Logo.png" alt="WhatsApp">
+      <img src="img/Whatsapp-Logo.png" alt="WhatsApp" width="22" height="22" loading="lazy">
       Consultar turno
     </a>
   </div>
  
   <footer class="site-footer">
-    <img src="img/blanco.png" alt="Amane Natural">
+    <img src="img/blanco.png" alt="Amane Natural" width="180" height="63" loading="lazy">
     <p>© 2025 Amane Natural. Todos los derechos reservados.</p>
     <nav>
       <a href="productos.html">Productos</a>
@@ -246,5 +236,25 @@
   </footer>
  
   <script src="main.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FL4YZ59S98');
+
+    function loadGTM() {
+      const s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98';
+      s.async = true;
+      document.head.appendChild(s);
+      window.removeEventListener('scroll', loadGTM);
+      window.removeEventListener('mousemove', loadGTM);
+      window.removeEventListener('touchstart', loadGTM);
+    }
+    window.addEventListener('scroll', loadGTM, { once: true, passive: true });
+    window.addEventListener('mousemove', loadGTM, { once: true });
+    window.addEventListener('touchstart', loadGTM, { once: true, passive: true });
+    setTimeout(loadGTM, 4000);
+  </script>
 </body>
 </html>

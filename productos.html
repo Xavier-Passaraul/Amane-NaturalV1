@@ -94,17 +94,8 @@
   }
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FL4YZ59S98');
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="global.css">
@@ -113,7 +104,7 @@
 <body>
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">
-      <img src="/img/negro..png" alt="Amane Natural">
+      <img src="/img/negro..png" alt="Amane Natural" width="181" height="56">
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
@@ -157,7 +148,7 @@
         data-img="img/img-crema-h.avif"
         data-benefits="Hidratación intensa por 24 h|Apta para todo tipo de piel|Ingredientes naturales certificados|Sin parabenos ni sulfatos">
         <div class="product-card__img-wrap">
-          <img src="img/img-crema-h.avif" alt="Crema Hidratante">
+          <img src="img/img-crema-h.avif" alt="Crema Hidratante" width="280" height="350" decoding="async">
           <span class="product-badge">Facial</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -176,7 +167,7 @@
         data-img="img/c-noctea.png"
         data-benefits="Regeneración celular nocturna|Regula el sebo y equilibra la piel|Efecto anti-manchas progresivo|Textura ligera de rápida absorción">
         <div class="product-card__img-wrap">
-          <img src="img/c-noctea.avif" alt="Noctéa Balance Repair">
+          <img src="img/c-noctea.avif" alt="Noctéa Balance Repair" width="280" height="350" loading="lazy" decoding="async">
           <span class="product-badge">Nocturno</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -195,7 +186,7 @@
         data-img="img/c-enebro.png"
         data-benefits="Alivia tensión y contracturas musculares|Efecto calor y desinflamatorio|Ideal post-entrenamiento|Apto para uso deportivo y clínico">
         <div class="product-card__img-wrap">
-          <img src="img/c-enebro.avif" alt="Descontracturante">
+          <img src="img/c-enebro.avif" alt="Descontracturante" width="280" height="350" loading="lazy" decoding="async">
           <span class="product-badge">Terapéutico</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -214,7 +205,7 @@
         data-img="img/crema-hidratante.avif"
         data-benefits="Regeneración intensiva de la piel|Restaura la elasticidad y firmeza|Indicada para piel seca y dañada|Aroma suave y textura nutritiva">
         <div class="product-card__img-wrap">
-          <img src="img/crema-hidratante.avif" alt="Crema Reparadora Total">
+          <img src="img/crema-hidratante.avif" alt="Crema Reparadora Total" width="280" height="350" loading="lazy" decoding="async">
           <span class="product-badge">Corporal</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -233,13 +224,13 @@
       <p>Escribinos y te asesoramos sin compromiso.</p>
     </div>
     <a href="https://wa.link/bl452o" class="wa-strip__cta" target="_blank">
-      <img src="img/Whatsapp-Logo.png" alt="WhatsApp">
+      <img src="img/Whatsapp-Logo.png" alt="WhatsApp" width="22" height="22" loading="lazy">
       Consultar ahora
     </a>
   </div>
 
   <footer class="site-footer">
-    <img src="img/blanco.png" alt="Amane Natural">
+    <img src="img/blanco.png" alt="Amane Natural" width="180" height="63" loading="lazy">
     <p>© 2026 Amane Natural. Todos los derechos reservados.</p>
     <nav>
       <a href="index.html">Inicio</a>
@@ -274,7 +265,7 @@
       </div>
 
       <a id="modalWaBtn" href="#" class="modal__cta" target="_blank">
-        <img src="img/Whatsapp-Logo.png" alt="">
+        <img src="img/Whatsapp-Logo.png" alt="" width="20" height="20" loading="lazy">
         Consultar por este producto
       </a>
     </div>
@@ -282,5 +273,26 @@
 </div>
 
   <script src="main.js"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FL4YZ59S98');
+
+    function loadGTM() {
+      const s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98';
+      s.async = true;
+      document.head.appendChild(s);
+      window.removeEventListener('scroll', loadGTM);
+      window.removeEventListener('mousemove', loadGTM);
+      window.removeEventListener('touchstart', loadGTM);
+    }
+    window.addEventListener('scroll', loadGTM, { once: true, passive: true });
+    window.addEventListener('mousemove', loadGTM, { once: true });
+    window.addEventListener('touchstart', loadGTM, { once: true, passive: true });
+    setTimeout(loadGTM, 4000);
+  </script>
 </body>
 </html>

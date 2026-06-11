@@ -50,17 +50,8 @@
   }
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FL4YZ59S98');
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="hidratar.css">
@@ -69,7 +60,7 @@
 <body>
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">
-      <img src="img/negro..png" alt="Amane Natural">
+      <img src="img/negro..png" alt="Amane Natural" width="181" height="56">
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
@@ -96,7 +87,7 @@
 
     <div class="article-block fade-up">
       <div class="article-block__img">
-        <img src="img/hidratante.avif" alt="Cuidado de la piel natural">
+        <img src="img/hidratante.avif" alt="Cuidado de la piel natural" width="430" height="323" decoding="async">
       </div>
       <div class="article-block__text">
         <span class="section-label">Entendiendo tu piel</span>
@@ -109,7 +100,7 @@
 
     <div class="article-block reverse fade-up">
       <div class="article-block__img">
-        <img src="img/hidratante1.avif" alt="Hidratación interna agua">
+        <img src="img/hidratante1.avif" alt="Hidratación interna agua" width="430" height="323" loading="lazy" decoding="async">
       </div>
       <div class="article-block__text">
         <span class="section-label">Hidratación desde adentro</span>
@@ -122,7 +113,7 @@
 
     <div class="article-block fade-up">
       <div class="article-block__img">
-        <img src="img/masaje1.avif" alt="Masaje facial mejora absorción">
+        <img src="img/masaje1.avif" alt="Masaje facial mejora absorción" width="430" height="323" loading="lazy" decoding="async">
       </div>
       <div class="article-block__text">
         <span class="section-label">El poder del masaje</span>
@@ -172,13 +163,13 @@
       <p>Consultame por WhatsApp y te ayudo a elegir los productos ideales para tu piel.</p>
     </div>
     <a href="https://wa.link/bl452o" class="wa-strip__cta" target="_blank">
-      <img src="img/Whatsapp-Logo.png" alt="WhatsApp">
+      <img src="img/Whatsapp-Logo.png" alt="WhatsApp" width="22" height="22" loading="lazy">
       Consultar ahora
     </a>
   </div>
 
   <footer class="site-footer">
-    <img src="img/blanco.png" alt="Amane Natural">
+    <img src="img/blanco.png" alt="Amane Natural" width="180" height="63" loading="lazy">
     <p>© 2026 Amane Natural. Todos los derechos reservados.</p>
     <nav>
       <a href="productos.html">Productos</a>
@@ -188,5 +179,26 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FL4YZ59S98');
+
+    function loadGTM() {
+      const s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98';
+      s.async = true;
+      document.head.appendChild(s);
+      window.removeEventListener('scroll', loadGTM);
+      window.removeEventListener('mousemove', loadGTM);
+      window.removeEventListener('touchstart', loadGTM);
+    }
+    window.addEventListener('scroll', loadGTM, { once: true, passive: true });
+    window.addEventListener('mousemove', loadGTM, { once: true });
+    window.addEventListener('touchstart', loadGTM, { once: true, passive: true });
+    setTimeout(loadGTM, 4000);
+  </script>
 </body>
 </html>

@@ -89,17 +89,8 @@
   }
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FL4YZ59S98');
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="global.css">
@@ -108,7 +99,7 @@
 <body>
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">
-      <img src="img/negro..png" alt="Amane Natural">
+      <img src="img/negro..png" alt="Amane Natural" width="181" height="56">
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
@@ -125,7 +116,7 @@
 
   <section class="hero-split">
     <div class="hero-split__img">
-      <img src="img/logo1.avif" alt="Maria Fernanda Juncos">
+      <img src="img/logo1.avif" alt="Maria Fernanda Juncos" width="800" height="900" decoding="async">
       <div class="hero-split__img-overlay"></div>
     </div>
     <div class="hero-split__content fade-up">
@@ -253,13 +244,13 @@
       <p>Consultá por WhatsApp y reservá tu turno hoy.</p>
     </div>
     <a href="https://wa.link/tp50g3" class="wa-strip__cta" target="_blank">
-      <img src="img/Whatsapp-Logo.png" alt="WhatsApp">
+      <img src="img/Whatsapp-Logo.png" alt="WhatsApp" width="22" height="22" loading="lazy">
       Consultar turno
     </a>
   </div>
 
   <footer class="site-footer">
-    <img src="img/blanco.png" alt="Amane Natural">
+    <img src="img/blanco.png" alt="Amane Natural" width="180" height="63" loading="lazy">
     <p>© 2026 Amane Natural. Todos los derechos reservados.</p>
     <nav>
       <a href="index.html">Inicio</a>
@@ -269,5 +260,26 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FL4YZ59S98');
+
+    function loadGTM() {
+      const s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FL4YZ59S98';
+      s.async = true;
+      document.head.appendChild(s);
+      window.removeEventListener('scroll', loadGTM);
+      window.removeEventListener('mousemove', loadGTM);
+      window.removeEventListener('touchstart', loadGTM);
+    }
+    window.addEventListener('scroll', loadGTM, { once: true, passive: true });
+    window.addEventListener('mousemove', loadGTM, { once: true });
+    window.addEventListener('touchstart', loadGTM, { once: true, passive: true });
+    setTimeout(loadGTM, 4000);
+  </script>
 </body>
 </html>
