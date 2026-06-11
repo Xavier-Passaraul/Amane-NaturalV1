@@ -111,8 +111,6 @@
   <link rel="stylesheet" href="productos.css">
 </head>
 <body>
-
-  <!-- NAV -->
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">
       <img src="/img/negro..png" alt="Amane Natural">
@@ -130,7 +128,6 @@
 </button>
   </nav>
 
-  <!-- HEADER -->
   <header class="page-header">
     <div class="page-header__inner">
       <div>
@@ -141,7 +138,6 @@
     </div>
   </header>
 
-  <!-- BARRA DE FILTRO -->
   <div class="filter-bar">
     <span class="filter-bar__label">Filtrar</span>
     <button class="filter-btn active" data-filter="all">Todos</button>
@@ -151,19 +147,17 @@
     <button class="filter-btn" data-filter="terapeutico">Terapéutico</button>
   </div>
 
-  <!-- PRODUCTOS -->
   <div class="products-section">
     <div class="products-grid">
-
       <div class="product-card fade-up" style="transition-delay:.05s"
         data-filter="facial"
         data-name="Crema Hidratante"
         data-category="Cuidado Facial"
         data-desc="Hidratación profunda para todo tipo de piel. Su fórmula enriquecida penetra en las capas más profundas de la dermis, aportando nutrientes esenciales y manteniendo la barrera hidrolipídica en óptimas condiciones."
-        data-img="img/img-crema-h.jpg"
+        data-img="img/img-crema-h.avif"
         data-benefits="Hidratación intensa por 24 h|Apta para todo tipo de piel|Ingredientes naturales certificados|Sin parabenos ni sulfatos">
         <div class="product-card__img-wrap">
-          <img src="img/img-crema-h.jpg" alt="Crema Hidratante">
+          <img src="img/img-crema-h.avif" alt="Crema Hidratante">
           <span class="product-badge">Facial</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -182,7 +176,7 @@
         data-img="img/c-noctea.png"
         data-benefits="Regeneración celular nocturna|Regula el sebo y equilibra la piel|Efecto anti-manchas progresivo|Textura ligera de rápida absorción">
         <div class="product-card__img-wrap">
-          <img src="img/c-noctea.png" alt="Noctéa Balance Repair">
+          <img src="img/c-noctea.avif" alt="Noctéa Balance Repair">
           <span class="product-badge">Nocturno</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -201,7 +195,7 @@
         data-img="img/c-enebro.png"
         data-benefits="Alivia tensión y contracturas musculares|Efecto calor y desinflamatorio|Ideal post-entrenamiento|Apto para uso deportivo y clínico">
         <div class="product-card__img-wrap">
-          <img src="img/c-enebro.png" alt="Descontracturante">
+          <img src="img/c-enebro.avif" alt="Descontracturante">
           <span class="product-badge">Terapéutico</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -217,10 +211,10 @@
         data-name="Crema Reparadora Total"
         data-category="Cuidado Corporal"
         data-desc="Regenera y nutre la piel dañada con una fórmula rica en activos reparadores. Indicada para pieles secas, agrietadas o castigadas por el sol o el frío, devuelve suavidad y elasticidad desde la primera aplicación."
-        data-img="img/crema-hidratante.jpeg"
+        data-img="img/crema-hidratante.avif"
         data-benefits="Regeneración intensiva de la piel|Restaura la elasticidad y firmeza|Indicada para piel seca y dañada|Aroma suave y textura nutritiva">
         <div class="product-card__img-wrap">
-          <img src="img/crema-hidratante.jpeg" alt="Crema Reparadora Total">
+          <img src="img/crema-hidratante.avif" alt="Crema Reparadora Total">
           <span class="product-badge">Corporal</span>
           <button class="product-card__quick-view">Ver detalles</button>
         </div>
@@ -230,11 +224,9 @@
           <p>Regenera y nutre la piel dañada.</p>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- STRIP -->
   <div class="wa-strip">
     <div class="wa-strip__text">
       <h2>¿Tenés dudas sobre qué producto elegir?</h2>
@@ -246,7 +238,6 @@
     </a>
   </div>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <img src="img/blanco.png" alt="Amane Natural">
     <p>© 2026 Amane Natural. Todos los derechos reservados.</p>
@@ -257,11 +248,9 @@
     </nav>
   </footer>
 
-  <!-- MODAL -->
   <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
   <div class="modal">
     <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
- 
     <div class="modal__img">
       <img id="modalImg" src="" alt="">
     </div>
@@ -270,13 +259,11 @@
       <p class="modal__category" id="modalCategory"></p>
       <h2 class="modal__title" id="modalTitle"></h2>
       <p class="modal__desc" id="modalDesc"></p>
- 
       <div class="modal__benefits">
         <p class="modal__benefits-label">Beneficios</p>
         <div class="benefit-list" id="modalBenefits"></div>
       </div>
- 
-      <!-- CARRITO DE CANTIDAD -->
+
       <div class="modal__cart">
         <p class="modal__cart-label">Cantidad</p>
         <div class="modal__qty">
@@ -285,8 +272,7 @@
           <button class="qty-btn" id="qtyPlus" aria-label="Sumar">+</button>
         </div>
       </div>
- 
-      <!-- CTA WHATSAPP con mensaje dinámico -->
+
       <a id="modalWaBtn" href="#" class="modal__cta" target="_blank">
         <img src="img/Whatsapp-Logo.png" alt="">
         Consultar por este producto
