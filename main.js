@@ -145,6 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const qtyMinus    = document.getElementById('qtyMinus');
   const qtyPlus     = document.getElementById('qtyPlus');
   const qtyValue    = document.getElementById('qtyValue');
+
+  // El modal solo existe en productos.html: en las demás páginas no hay nada que preparar.
+  if (!modal || !qtyMinus || !qtyPlus || !qtyValue) return;
  
   let currentProduct = '';
   let qty = 1;
